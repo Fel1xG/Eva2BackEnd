@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mi_estilo.css' %}">
+    <title>Productos Web</title>
+</head>
+<body>
+    <header>
+        <h1>Productos</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'miApp:lista_productos' %}">Lista de Productos</a></li>
+                <li><a href="{% url 'miApp:crear_producto' %}">Crear Producto</a></li>
+            </ul>            
+        </nav>
+    </header>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <footer>
+        <p>Hecho por miiii uwu {{ fecha_actual|date:"Y" }}</p>
+    </footer>
+    
+</body>
+</html>

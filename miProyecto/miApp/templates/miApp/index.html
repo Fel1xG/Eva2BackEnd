@@ -15,6 +15,8 @@
             <ul>
                 <li><a href="{% url 'miApp:lista_productos' %}">Lista de Productos</a></li>
                 <li><a href="{% url 'miApp:crear_producto' %}">Crear Producto</a></li>
+                <!-- Nuevo botón para ir al panel de administración -->
+                <li><button onclick="window.location.href='/admin/miApp/producto/';">Panel Admin</button></li>
             </ul>            
         </nav>
     </header>
